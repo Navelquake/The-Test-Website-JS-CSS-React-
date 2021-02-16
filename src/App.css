@@ -1,38 +1,52 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'PT Sans', sans-serif;
+.App {
+  text-align: center;
+  background-color: honeydew;
+}
+/*
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}*/
+
+.headerContainer{
+  display: flex;
 }
 
-.home,
-.services,
-.products,
-.sign-up {
+.headerLogo{
+  height: 15vmin;
+  pointer-events: none;
+}
+
+.headerContainer h2{
+  flex-grow: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .headerLogo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+/*
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
-  height: 90vh;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.services {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
+.App-link {
+  color: #61dafb;
+}*/
 
-.products {
-  background-position: center;
-  background-size: 2440px;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.sign-up {
-  color: #fff;
-  font-size: 100px;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

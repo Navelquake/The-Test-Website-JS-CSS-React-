@@ -1,25 +1,23 @@
-import React from 'react';
-import Navbar from './components/Navbar';
+//import logo from './logo.svg';
 import './App.css';
-import Home from './components/pages/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Services from './components/pages/Services';
-import Products from './components/pages/Products';
-import SignUp from './components/pages/SignUp';
+import {CFooter} from './components/CFooter'
+import Cheader from './components/CHeader'
+import CContents from './components/CContents'
+import COuter from './components/COuter'
 
 function App() {
   return (
-    <>
-      <Router>
-        <Navbar />
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/services' component={Services} />
-          <Route path='/products' component={Products} />
-          <Route path='/sign-up' component={SignUp} />
-        </Switch>
-      </Router>
-    </>
+    <div className="App">
+      <Cheader aName="Jan" aFamily="Kowalski"/>
+      {/*Cheader aName="Tomasz" aFamily="Nowak"/*/}
+      <CContents/>
+      <COuter/>
+      <CFooter weather="słoneczna" temp="25"> 
+        <p>Niebo jest bezchmurne, wiatr słaby.</p>
+      </CFooter> 
+      {/*}CFooter weather="deszczowa" temp="15"/*/}
+      {/*}CFooter weather="śnieżna" temp="-5"/*/} 
+    </div>
   );
 }
 
